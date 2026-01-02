@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Web</title>
+  <title>Five Nights at Gilipollas</title>
   <style>
     body {
       margin: 0;
@@ -25,6 +25,7 @@
     .buttons {
       display: flex;
       gap: 15px;
+      margin-bottom: 20px;
     }
 
     button, a {
@@ -42,14 +43,38 @@
     button:hover, a:hover {
       background: #1e40af;
     }
+
+    #texto {
+      display: none;
+      margin-top: 10px;
+      max-width: 400px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>Five Nights at Gilipollas</h1>
+  <h1>Bienvenido a Five Nights at Gilipollas desarollado por unos gilipollas</h1>
 
   <div class="buttons">
-    <!-- Cambia archivo.zip por el nombre real del archivo -->
-    <a href="five_nights_at_gilipollas_0.1.zip" download>Descargar BETA 0.1</a>
+    <a href="five_nights_at_gilipollas_0.1.7z" download>Descargar BETA 0.1</a>
   </div>
+
+  <!-- Botón que muestra/oculta el texto -->
+  <button onclick="mostrarTexto()">Parches</button>
+
+  <!-- Texto oculto -->
+  <p id="texto">
+    2/1/26, 0.1 <br>
+    Añadido oficina y animatronicos al entrar a la oficina <br>
+    Llamada de noche 1 <br>
+    Animatronicos en el escenario <br>
+  </p>
+
+  <script>
+    function mostrarTexto() {
+      const texto = document.getElementById("texto");
+      texto.style.display = texto.style.display === "none" ? "block" : "none";
+    }
+  </script>
 </body>
 </html>
